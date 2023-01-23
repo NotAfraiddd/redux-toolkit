@@ -3,6 +3,12 @@ import { Divider } from "antd";
 import Filters from "./components/Filter";
 import TodoList from "./components/TodoList";
 import Title from "antd/es/typography/Title";
+import { setupServer } from "./fakeAPIs";
+import { useEffect } from "react";
+
+if (process.env.NODE_ENV === "development") {
+    setupServer();
+}
 
 function App() {
     return (

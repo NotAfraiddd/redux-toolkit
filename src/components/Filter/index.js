@@ -1,5 +1,5 @@
 import { Col, Row, Input, Typography, Radio, Select, Tag } from "antd";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import filterSlice from "./filterSlice";
 
@@ -10,7 +10,6 @@ export default function Filters() {
     const [filterStatus, setFilterStatus] = useState("All");
     const [filterPriority, setFilterPriority] = useState([]);
 
-    const inputRef = useRef();
     const dispatch = useDispatch();
 
     const handleFilterSearch = (data) => {
